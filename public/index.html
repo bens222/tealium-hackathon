@@ -1,57 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><img src="./images/tealium_logo_white_01.png" alt="tealium-logo"></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="container">
-      <div class="button-container">
-        <button>Single User</button>
-        <img src="./images/spiro_color-400x400.png" alt="sipro">
-        <button>20 Users</button>
-      </div>
-      <div class="chart-container">
-            <div id="valueChart" style="max-width: 1000px"></div>
-            <div id="timeChart" style="max-width: 1000px"></div>
-            <div id="deviceChart" style="max-width: 1000px"></div>
-            <div id="browserChart" style="max-width: 1000px"></div>
-            <div id="audienceChart" style="max-width: 1000px"></div>
-            <div id="badgesChart" style="max-width: 1000px"></div>
-      </div>
-      <div class="checkbox-container">
-        <h1>Search Select</h1>
-        <div class="checkboxes">
-          <input type="checkbox" name="Badges" id="">
-          <label for="Badges">Badges</label>
-        </div>
-        <div class="checkboxes">
-          <input type="checkbox" name="Audiences" id="">
-          <label for="Audiences">Audiences</label>
-        </div>
-        <div class="checkboxes">
-          <input type="checkbox" name="Badges" id="">
-          <label for="Badges">Badges</label>
-        </div>
-        <div class="checkboxes">
-          <input type="checkbox" name="Badges" id="">
-          <label for="Badges">Badges</label>
-        </div>
-      </div>
-    </div>
-  </main>
-  <script src="../src/index.js"></script>
+	<header>
+		<nav>
+			<ul>
+				<li><img src="./images/tealium_logo_white_01.png" alt="tealium-logo"></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			<div class="button-container">
+				<button>Single User</button>
+				<img src="./images/spiro_color-400x400.png" alt="sipro">
+				<button>20 Users</button>
+			</div>
+			<div class="chart-container">
+				<div id="audienceChart" style="max-width: 1000px" class="checked"></div>
+				<div id="badgesChart" style="max-width: 1000px" class="checked"></div>
+				<div id="valueChart" style="max-width: 1000px" class="checked"></div>
+				<div id="deviceChart" style="max-width: 1000px" class="checked"></div>
+				<div id="browserChart" style="max-width: 1000px"class="checked"></div>
+				<div id="timeChart" style="max-width: 1000px"class="checked"></div>
+				<div></div>
+			</div>
+			<div class="checkbox-container">
+				<h1>Select Data</h1>
+				<div class="checkboxes">
+					<input type="checkbox" name="All" id="all">
+					<label for="All">All</label>
+				</div>
+				<div class="checkboxes">
+					<input type="checkbox" name="Audiences" id="audience">
+					<label for="Audiences">Audiences</label>
+				</div>
+				<div class="checkboxes">
+					<input type="checkbox" name="Badges" id="badges">
+					<label for="Badges">Badges</label>
+				</div>
+				<div class="checkboxes">
+					<input type="checkbox" name="Value" id="value">
+					<label for="Value">Value</label>
+				</div>
+				<div class="checkboxes">
+					<input type="checkbox" name="Device" id="device">
+					<label for="Device">Device</label>
+				</div>
+				<div class="checkboxes">
+					<input type="checkbox" name="Browser" id="browser">
+					<label for="Browser">Browser</label>
+				</div>
+				<div class="checkboxes">
+					<input type="checkbox" name="TimeSpent" id="time-spent">
+					<label for="TimeSpent">Time Spent</label>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="../src/index.js"></script>
 </body>
+
 </html>
