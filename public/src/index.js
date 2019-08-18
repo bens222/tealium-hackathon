@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $.getJSON('./src/data.json', function(vistorData) {
+  $.getJSON('https://e2nkh9bvqg.execute-api.us-east-2.amazonaws.com/prod/visitorSampler?count=1000', function(vistorData) {
     const singleUser = vistorData.splice(0, 1);
     const singleUserAudience = singleUser[0].audiences.sort();
     const singleUserBadge = singleUser[0].badges.sort();
@@ -30,5 +30,13 @@ $(document).ready(function() {
     }
     console.log('label:: ', capturedBadges);
    
+    let userAudiencesTotal = visitorAudiences.length;
+    let userBadgeTotal = visitorBadges.length;
+    let usersTotal = visitorData.length;
+
+    // logic for calculations for averages 
+    let userAudienceAverage = (userAudiencesTotal / usersTotal) * 100;
+    let userBadgeAverage = (userBadgeTotal  / usersTotal) * 100;
+    
   })
 })
